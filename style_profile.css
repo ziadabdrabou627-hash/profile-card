@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --bg-color: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #020617 100%);       
+  --card-bg: linear-gradient(135deg, #1f315a 0%, #1e1b4b 50%, #020617 100%);        
+  --text-main: #f4f4f4;      
+  --text-muted: #fafcff;     
+  --primary-color: #00f2fe;  
+  --secondry-color: #4facfe; 
+}
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes slideup{
+    from{opacity: 0 ; transform: translateY(35px);}
+    to{opacity:1; transform: translateY(0);}
+}
+@keyframes bounce {
+    0%,100%{transform: translateY(0);}
+    50%{transform:translateY(-4px) ;}
+}
+
+body{
+    min-height: 100vh;
+    background: var(--bg-color);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container{
+display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 560px ;
+    height: auto ;
+    padding: 24px;
+    text-align: center;
+    align-items:center;
+    box-shadow: 0 0px 25px -5px  rgba(31, 69, 164, 0.5);
+    background: var(--card-bg);
+    border-radius: 18px;
+       
+   
+
+}
+
+h2,p{
+     animation: fadeIn 1.5s ease-in-out 1;
+     line-height: 1.3;
+     color:var(--text-muted);
+}
+.img1{
+    width: 100px;
+    height: 100px;
+    background-color: #fdfefe;
+    border-radius: 50px;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out 1;
+}
+
+.btn{
+color: #1e1b4b;
+background-color: var(--text-muted);
+padding: 10px;
+border-radius: 17px;
+border: none;
+font-weight: 200;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+transition: all .25s ease;
+animation: bounce .6s ease-in-out 2;
+}
+
+.btn:hover{
+transform: translateY(-4px);
+box-shadow: 0 12px 10px rgba(6, 177, 193, 0.5);
+}
